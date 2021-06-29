@@ -1,0 +1,26 @@
+{
+  "name": "webpack-systemjs-issue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server ./ --port 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alk-sdavid/webpack-systemjs-issue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alk-sdavid/webpack-systemjs-issue/issues"
+  },
+  "homepage": "https://github.com/alk-sdavid/webpack-systemjs-issue#readme",
+  "devDependencies": {
+    "eslint": "~7.29.0",
+    "live-server": "~1.2.1",
+    "prettier": "~2.3.2",
+    "react": "~17.0.2",
+    "systemjs": "~6.10.1"
+  }
+}

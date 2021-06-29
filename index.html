@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Webpack issue</title>
+    <meta name="importmap-type" content="systemjs-importmap" />
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "webpack-5.40.0": "/webpack-5.40.0/dist/main.js",
+          "webpack-5.41.0": "/webpack-5.41.0/dist/main.js",
+          "react": "/node_modules/react/umd/react.production.min.js"
+        }
+      }
+    </script>
+    <script src="/node_modules/systemjs/dist/system.min.js"></script>
+  </head>
+  <body>
+    <script>
+      System.import("webpack-5.40.0")
+        .then((m) => {
+          console.log(m);
+          m.init();
+        })
+        .catch(console.error)
+        .then(() => System.import("webpack-5.41.0"))
+        .then((m) => {
+          console.log(m);
+          m.init();
+        })
+        .catch(console.error);
+    </script>
+  </body>
+</html>
